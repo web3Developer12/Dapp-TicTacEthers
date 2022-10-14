@@ -1,0 +1,24 @@
+---
+const container = 'div';
+import IconO from "./IconO.astro";
+import IconX from "./IconX.astro";
+---
+
+<container class="row">
+    <container><IconO/></container>
+    <container><IconX/></container>
+</container>
+
+<style>
+    .row{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        margin-top:4%;
+        width:11%;
+        transform:scale(.6);
+        margin-bottom:1%;
+    }
+    
+</style>

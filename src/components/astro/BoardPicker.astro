@@ -1,0 +1,125 @@
+---
+import Picker from '../jsx/Picker';
+---
+<div class="boardPicker tada">
+    <p class="board-header">PICK PLAYER 1’S MARK</p>
+    <Picker client:load/>
+    <p class="board-header">REMEMBER : X GOES FIRST</p>
+</div>
+
+<style is:global>
+
+    .board-header{
+        font-family:"outfit-medium";
+        color: #a8bfc9;
+    }
+    .boardPicker{
+        height:204.8px;
+        width:460px;
+        border-radius:12px;
+        background-color: #1f3641;
+        box-shadow: inset 0 -8px 0 #10212a;
+        border-radius: 15px;
+        text-align:center;
+
+    }
+    .picker{
+        position:relative;
+        margin-inline:5%;
+        height: 62px;
+        padding: 9px;
+        background-color: #1a2a33;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+    }
+    .choice{
+        height: 98%;
+        width:48%;
+        border-radius: 11px;
+        cursor:pointer;
+        transition:.3s;
+        z-index:2;
+
+    }
+    .choice:hover{
+        background-color:rgba(255, 255, 255, 0.034);
+
+    }
+    .choice svg{
+        transform:scale(.5);
+        transition:.12s;
+    }
+    #choice-bar{
+        position:absolute;
+        height: 78%;
+        width:48%;
+        border-radius: 11px;
+        cursor:pointer;
+        transition:.3s;
+        background-color:#A8BFC9;
+        transition:.3s;
+        z-index:1;
+    }
+
+    .choice-left{
+        left:50%;
+    }
+    .choice-right{
+        left:0%;
+        margin-left:7px;
+    }
+    .tada {
+        -webkit-animation-name: tada;
+        animation-name: tada;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    @-webkit-keyframes tada {
+        0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        }
+        10%, 20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        }
+        30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        }
+        40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        }
+        100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        }
+    }
+    @keyframes tada {
+        0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        }
+        10%, 20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        }
+        30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        }
+        40%, 60%, 80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        }
+        100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        }
+    } 
+</style>

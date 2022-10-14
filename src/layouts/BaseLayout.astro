@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacEther</title>
+</head>
+<body>
+    <slot/>
+</body>
+</html>
+
+<style>
+    *{
+        margin :0px;
+        padding:0px;
+        user-select:none;
+    }
+    body,html{
+        scroll-behavior:smooth;
+    }
+    body{
+        background-color:#192A32;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:space-around;
+    }
+    .yellow{
+        background-color:#F4B237;
+    }
+    .gray{
+        background-color:#9DB1BC;
+    }
+    @font-face{
+        font-family:"outfit-medium";
+        src:url("../assets/fonts/outfit/static/Outfit-Medium.ttf");
+    }
+    @font-face{
+        font-family:"outfit-bold";
+        src:url("../assets/fonts/outfit/static/Outfit-Bold.ttf");
+    }
+    
+</style>
+<script>
+    let bgSound = new Audio("sounds/bg.mp3");
+    //bgSound.play()
+    const connect = async()=>{
+    alert("Hello");
+}
+</script>
